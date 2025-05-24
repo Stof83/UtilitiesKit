@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:UtilitiesKit}",
+            "name": "Debug MacrosPlayground",
+            "program": "${workspaceFolder:UtilitiesKit}/.build/debug/MacrosPlayground",
+            "preLaunchTask": "swift: Build Debug MacrosPlayground"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:UtilitiesKit}",
+            "name": "Release MacrosPlayground",
+            "program": "${workspaceFolder:UtilitiesKit}/.build/release/MacrosPlayground",
+            "preLaunchTask": "swift: Build Release MacrosPlayground"
+        }
+    ]
+}

@@ -27,12 +27,14 @@ extension Bundle {
             fatalError("Failed to load \(file)")
         }
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "y-MM-dd"
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "y-MM-dd"
         
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(formatter)
-        
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+
         guard let loaded = try? decoder.decode(T.self, from: data) else {
             fatalError("failed to decode \(file)")
         }
